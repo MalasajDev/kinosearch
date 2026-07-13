@@ -1,105 +1,107 @@
+# 🌐 Website Link
+
+https://kinosearch-git-master-malasayproj.vercel.app/
+
 # 🎬 KinoSearch
 
-**KinoSearch** — современное веб-приложение для поиска фильмов и сериалов, просмотра подробной информации, сохранения избранного и работы с отзывами. Проект сделан как полноценная SPA-витрина: с аккуратной архитектурой, адаптивным интерфейсом, анимациями и интеграцией с внешним API.
-
-Посмотреть сейчас можно по ссылке: https://kinosearch-git-master-malasayproj.vercel.app/
+**KinoSearch** — a modern web application for searching movies and TV series, viewing detailed information, saving favorites, and working with reviews. The project is built as a complete SPA showcase: with a clean architecture, responsive interface, animations, and integration with an external API.
 
 ---
 
-## ✨ Что умеет приложение
+## ✨ What the application can do
 
-- 🔎 Искать фильмы и сериалы через **Open Movie Database (OMDb) API**
-- 🎞️ Открывать детальную карточку фильма: постер, рейтинг, жанры, описание, актеры, режиссер, награды и другие данные
-- ❤️ Добавлять фильмы в избранное и хранить их между сессиями
-- 🕘 Сохранять историю поисковых запросов
-- 📝 Читать и добавлять пользовательские отзывы к фильмам
-- 🌌 Показывать кинематографичный темный интерфейс с анимированным фоном
-- 📱 Корректно работать на мобильных, планшетах и десктопах
-- ⚠️ Обрабатывать состояния загрузки, ошибок, пустых результатов и отсутствующих постеров
-
----
-
-## 🚀 Демо-сценарий
-
-Пользователь открывает главную страницу, видит подборки и визуальный hero-блок, ищет фильм или сериал, переходит в карточку, изучает подробности, добавляет фильм в избранное и оставляет отзыв. Все ключевые действия сохраняются локально, поэтому приложение ощущается как законченный продукт, а не просто тестовая страница с запросом к API.
+- 🔎 Search for movies and TV series through **Open Movie Database (OMDb) API**
+- 🎞️ Open a detailed movie card: poster, rating, genres, description, actors, director, awards, and other data
+- ❤️ Add movies to favorites and keep them between sessions
+- 🕘 Save search query history
+- 📝 Read and add user reviews for movies
+- 🌌 Display a cinematic dark interface with an animated background
+- 📱 Work correctly on mobile devices, tablets, and desktops
+- ⚠️ Handle loading states, errors, empty results, and missing posters
 
 ---
 
-## 🛠️ Технологический стек
+## 🚀 Demo scenario
 
-| Технология       | Назначение                                    |
-| ---------------- | --------------------------------------------- |
-| **React 18**     | Компонентный UI                               |
-| **TypeScript**   | Типизация данных, API и состояния             |
-| **Vite**         | Быстрая сборка и dev-сервер                   |
-| **React Router** | Клиентская маршрутизация                      |
-| **Zustand**      | Глобальное состояние и persist в localStorage |
-| **Axios**        | Запросы к OMDb API                            |
-| **Tailwind CSS** | Адаптивная стилизация                         |
-| **GSAP**         | Плавные UI-анимации                           |
-| **Three.js**     | Визуальный анимированный фон                  |
-| **OMDb API**     | Данные о фильмах и сериалах                   |
+The user opens the home page, sees collections and a visual hero section, searches for a movie or TV series, opens its card, explores the details, adds the movie to favorites, and leaves a review. All key actions are saved locally, so the application feels like a finished product rather than just a test page with an API request.
 
 ---
 
-## 🧩 Основные страницы
+## 🛠️ Technology stack
 
-| Страница     | Маршрут         | Описание                                                   |
-| ------------ | --------------- | ---------------------------------------------------------- |
-| 🏠 Главная   | `/`             | Hero-секция, подборки, жанры и популярный контент          |
-| 🔎 Поиск     | `/search?q=...` | Поиск фильмов и сериалов с результатами в адаптивной сетке |
-| 🎬 Детали    | `/movie/:id`    | Полная информация о выбранном фильме или сериале           |
-| ❤️ Избранное | `/favorites`    | Сохраненные пользователем фильмы                           |
-| 🚧 404       | `*`             | Страница для несуществующих маршрутов                      |
+| Technology       | Purpose                                      |
+| ---------------- | -------------------------------------------- |
+| **React 18**     | Component-based UI                           |
+| **TypeScript**   | Typing for data, API, and state              |
+| **Vite**         | Fast build and dev server                    |
+| **React Router** | Client-side routing                          |
+| **Zustand**      | Global state and persistence in localStorage |
+| **Axios**        | Requests to the OMDb API                     |
+| **Tailwind CSS** | Responsive styling                           |
+| **GSAP**         | Smooth UI animations                         |
+| **Three.js**     | Visual animated background                   |
+| **OMDb API**     | Data about movies and TV series              |
 
 ---
 
-## 📁 Структура проекта
+## 🧩 Main pages
+
+| Page         | Route           | Description                                                  |
+| ------------ | --------------- | ------------------------------------------------------------ |
+| 🏠 Home      | `/`             | Hero section, collections, genres, and popular content       |
+| 🔎 Search    | `/search?q=...` | Movie and TV series search with results in a responsive grid |
+| 🎬 Details   | `/movie/:id`    | Full information about the selected movie or TV series       |
+| ❤️ Favorites | `/favorites`    | Movies saved by the user                                     |
+| 🚧 404       | `*`             | Page for nonexistent routes                                  |
+
+---
+
+## 📁 Project structure
 
 ```text
 src/
-├── api/                 # OMDb API, типы и нормализация данных
+├── api/                 # OMDb API, types, and data normalization
 ├── components/
 │   ├── layout/          # Header, Footer
-│   ├── sections/        # Главные секции страниц
-│   └── ui/              # Переиспользуемые UI-компоненты
-├── data/                # Стартовые данные для отзывов
-├── hooks/               # Хуки для поиска, загрузки и infinite scroll
-├── pages/               # Страницы приложения
+│   ├── sections/        # Main page sections
+│   └── ui/              # Reusable UI components
+├── data/                # Initial data for reviews
+├── hooks/               # Hooks for search, loading, and infinite scroll
+├── pages/               # Application pages
 ├── store/               # Zustand store
-├── utils/               # Константы, форматтеры, fallback-логика
-├── App.tsx              # Роутинг приложения
-└── main.tsx             # Точка входа
+├── utils/               # Constants, formatters, fallback logic
+├── App.tsx              # Application routing
+└── main.tsx             # Entry point
 ```
 
 ---
 
-## ⚙️ Быстрый локалыный старт
+## ⚙️ Quick local start
 
-### 1. Установить зависимости
+### 1. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Создать `.env`
+### 2. Create `.env`
 
-Можно использовать `.env.example` как шаблон:
+You can use `.env.example` as a template:
 
 ```env
 VITE_OMDB_API_KEY=your_api_key_here
 VITE_OMDB_BASE_URL=https://www.omdbapi.com/
 ```
 
-API-ключ можно получить на сайте [OMDb API](https://www.omdbapi.com/apikey.aspx).
+You can get an API key on the [OMDb API](https://www.omdbapi.com/apikey.aspx) website.
 
-### 3. Запустить проект
+### 3. Run the project
 
 ```bash
 npm run dev
 ```
 
-Приложение будет доступно по адресу:
+The application will be available at:
 
 ```text
 http://localhost:5173
@@ -107,40 +109,40 @@ http://localhost:5173
 
 ---
 
-## 📦 Доступные команды
+## 📦 Available commands
 
-| Команда           | Описание                                |
-| ----------------- | --------------------------------------- |
-| `npm run dev`     | Запуск dev-сервера                      |
-| `npm run build`   | TypeScript-проверка и production-сборка |
-| `npm run preview` | Предпросмотр production-сборки          |
-| `npm run lint`    | Проверка кода линтером                  |
+| Command           | Description                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Start the dev server                  |
+| `npm run build`   | TypeScript check and production build |
+| `npm run preview` | Preview the production build          |
+| `npm run lint`    | Check the code with the linter        |
 
 ---
 
-## 🔐 Переменные окружения
+## 🔐 Environment variables
 
 ```env
 VITE_OMDB_API_KEY=your_api_key_here
 VITE_OMDB_BASE_URL=https://www.omdbapi.com/
 ```
 
-⚠️ Реальный API-ключ не стоит коммитить в репозиторий. Для примера конфигурации используйте `.env.example`.
+⚠️ A real API key should not be committed to the repository. Use `.env.example` as a configuration example.
 
 ---
 
-## 🧪 Сборка
+## 🧪 Build
 
 ```bash
 npm run build
 ```
 
-После успешной сборки production-файлы будут находиться в папке `dist/`. Проект можно разместить на Vercel, Netlify, GitHub Pages или любом другом статическом хостинге.
+After a successful build, the production files will be located in the `dist/` folder. The project can be deployed to Vercel, Netlify, GitHub Pages, or any other static hosting.
 
 ---
 
-## 👨‍💻 Авторская заметка
+## 👨‍💻 Author's note
 
-KinoSearch создан как демонстрационный frontend-проект с акцентом на чистую структуру, приятный пользовательский опыт и работу с реальными данными. Это приложение можно развивать дальше: добавить авторизацию, персональные подборки, рекомендации, трейлеры, серверное хранение отзывов и полноценный backend.
+KinoSearch was created as a demo frontend project with a focus on clean structure, pleasant user experience, and working with real data. This application can be developed further: add authentication, personal collections, recommendations, trailers, server-side review storage, and a full backend.
 
-**KinoSearch — небольшой, но законченный продукт о кино, который показывает не только владение стеком, но и внимание к деталям.** 🍿
+**KinoSearch — a small but complete movie product that shows not only command of the stack, but also attention to detail.** 🍿
