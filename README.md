@@ -1,6 +1,6 @@
 # 🌐 Website Link
 
-https://kinosearch-git-master-malasayproj.vercel.app/
+https://kinosearch-alpha.vercel.app/
 
 # 🎬 KinoSearch
 
